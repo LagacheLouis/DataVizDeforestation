@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Titre de la page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id= "notDataViz">
+        <div id= "home">
+            <h1 id="title">Déforestation</h1>
+            <img id="subtitle" src="img/reste.svg"/>
+            <div id="btn_start" class="btn_next">
+                <p>Anatomie d'un désatre</p>
+                <img src="img/fleche_noir.svg"/>
+            </div>
+        </div>
+        <div id = "scroll_info">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="page_positif" style="display: block;">
+            <div id="contextTitle" class="page1">
+                <h2>Depuis</h2>
+                <h2>25</h2>
+                <h2>ans</h2>
+                <div></div>
+                <p>La déforestation <br/> s'accelère dans le monde.</p>
+            </div>
+            <div id= "treeCounterZone" class="page1">
+                <p id="treeCounter"></p>
+                <p>arbres coupés</p>
+                <p>depuis que vous êtes connecté</p>
+            </div>
+            <span id = "surfaceDisparu" class="page1"><img src="img/Ligne.svg"/><img src="img/surface_disparu.svg"/></span>
+            <img id = "feuille" src="img/Feuille_chiffre.png"/>
+
+            <p id = "sqrkmcutted" class="page2">= 12 913 385 km²</p>
+        </div>
+
+        <div id="page_negatif">
+            <img id="feuille_blanche" src="img/feuille_blanche.png"/>
+            <div class = "title_page3">
+                <h2>Anatomie d'un désatre.</h2>
+                <div id="btn_visu" class="btn_next">
+                    <p>Découvrir les dessous<br/>de ce phénomène mondial</p>
+                    <img src="img/fleche_blanche.svg"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="dataVizLayout">
+        <img class = "date_svg"src="img/Date.svg"/>
+        <div class = "country_panel" id="country_panel_l"></div>
+        <div class = "country_panel" id="country_panel_r"></div>
+        <p class = "visu_legend"><strong id="visu_legend_number">0/20</strong> pays qui ont détruit le plus de surface forestière depuis 25 ans en <strong>KM²</strong></p>
+        <img id="btn_restart" src="img/croix.svg"/>
+    </div>
+    <canvas id="myCanvas"></canvas>
+</body>
+</html>

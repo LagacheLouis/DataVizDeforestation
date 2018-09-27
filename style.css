@@ -1,0 +1,375 @@
+@font-face{
+    font-family: Anton;
+    src: url("font/Anton-Regular.ttf") format("opentype");
+}
+
+@font-face{
+    font-family: SourceSansPro;
+    src: url("font/SourceSansPro-Light.ttf") format("opentype");
+}
+
+
+@font-face{
+    font-family: SourceSansProBold;
+    src: url("font/SourceSansPro-SemiBold.ttf") format("opentype");
+}
+
+html{
+
+    font-size: 62.5%;
+}
+
+body{
+    /*background-image:  linear-gradient(to right,rgba(100,100,100,0.5),rgba(200,200,200,0.8),transparent 30%,rgba(255,255,255,0),transparent 70%,rgba(200,200,200,0.8),rgba(100,100,100,0.5)), url("img/noise.jpg");
+    background-size: 100%,2000px;*/
+    padding: 0;
+    margin: 0;
+    display: flex;
+   /* animation: grain 0.5s steps(1) infinite;*/
+    overflow: hidden;
+}
+
+canvas{
+    margin: 0;
+    position: absolute;
+    background-image:  linear-gradient(to right,rgba(100,100,100,0.5),rgba(200,200,200,0.8),transparent 30%,rgba(255,255,255,0),transparent 70%,rgba(200,200,200,0.8),rgba(100,100,100,0.5)), url("img/noise.jpg");
+    background-size: 100%,2000px;
+    animation: grain 0.5s steps(1) infinite;
+    z-index: -1;
+}
+
+
+#feuille{
+    position: fixed;
+    top: 50vh;
+    margin-top: -40vh;
+    left: 50vw;
+    margin-left: -18.5vh;
+    width: 37vh;
+    height: 80vh;
+}
+
+#scroll_info{ 
+    z-index: 100;
+    opacity: 0;
+    position: fixed;
+    right: 4vw;
+    top:50vh;
+    margin-top:-17rem;
+}
+
+#scroll_info div{
+    height: 3rem;
+    width: 3rem;
+    border-style: solid;
+    border-color: #232323;
+    border-width: 1px;
+    border-radius: 100%;
+    margin: 2rem 0;
+}
+#scroll_info :nth-child(1){
+    background-color: #232323;
+}
+
+
+
+/*Home*/
+#title{
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    top:25vh;
+    font-family: Anton;
+    font-size: 12.6rem;
+}
+
+#subtitle{
+    position: fixed;
+    width: 15vw;
+    text-align: center;
+    top:50vh;
+    left:50vw;
+    margin-left: -7.5vw;
+}
+
+.btn_next{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: SourceSansPro;
+    text-transform: uppercase;
+    font-size: 2.26rem;
+    letter-spacing: 0.4rem;
+    transition: 0.5s;
+}
+
+.btn_next p{
+    margin: 0;
+    padding: 0;
+}
+
+.btn_next img{
+    width: 4vh;
+    height: 4vh;
+}
+
+.btn_next img:hover{
+    transform: scale(0.8);
+    cursor: pointer;
+}
+
+#btn_start{
+    position: fixed;
+    bottom: 5vh;
+    width: 100vw;
+}
+
+/*Page 1*/
+#contextTitle{
+    position: fixed;
+    margin: 4vw;
+    color: #232323;
+}
+
+#contextTitle h2{
+    font-family: anton;
+    font-size: 12rem;
+    line-height: 3.5rem;
+    padding: 0;
+}
+
+#contextTitle h2:nth-of-type(1){
+    font-size: 7.7rem;
+}
+
+#contextTitle p{
+    font-family: SourceSansPro;
+    font-size: 20pt;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    margin: 0;
+}
+
+#contextTitle div {
+    height: 0.9rem;
+    width: 6.6rem;
+    background-color: #232323;
+    margin-top: 2.6rem;
+    margin-bottom: 4rem; 
+}
+
+#treeCounterZone{
+    position: fixed;
+    right: 4vw;
+    bottom: 4vw;
+    text-align: right;
+}
+
+#treeCounterZone p{
+    margin: 0;
+}
+
+#treeCounterZone :nth-child(1){
+    font-family: Anton;
+    font-size: 6.1rem;
+}
+
+#treeCounterZone :nth-child(2){
+    font-family: SourceSansProBold;
+    font-family: Anton;
+    font-size: 2.6rem;
+    text-transform: uppercase;
+}
+
+#treeCounterZone :nth-child(3){
+    font-family: SourceSansPro;
+    font-size: 2.6rem;
+    text-transform: uppercase;
+}
+
+#surfaceDisparu{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    top:39vh;
+    right: 2vw;
+}
+
+#surfaceDisparu :nth-child(1) {
+    width: 25vw;
+}
+
+#surfaceDisparu :nth-child(2) {
+    position: relative;
+    right: 15vw;
+    width: 15vw;
+}
+
+/*Page 2*/
+
+#sqrkmcutted{
+    position: fixed;
+    right: 17vw;
+    top: 23vh;
+
+    font-family: Anton;
+    font-size: 14.6rem;
+}
+
+
+.page2{
+    opacity: 0;
+}
+
+#page_negatif{
+    display: none;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+
+}
+
+#feuille_blanche
+{
+    position: fixed;
+    top: 50vh;
+    margin-top: -40vh;
+    left: 50vw;
+    margin-left: -18.5vh;
+    width: 37vh;
+    height: 80vh;
+    transform:scale(3);;
+    left: 23vw;
+    top:60vh;
+}
+
+.title_page3{
+    right: 13vw;
+    top: 38vh;
+    position: fixed;
+}
+
+.title_page3 h2{
+    text-align: right;
+    font-family: Anton;
+    font-size: 8.6rem;
+    color: #e5e5e5;
+    letter-spacing: 0.8rem;
+    margin: 0;
+}
+
+#btn_visu{
+    flex-direction: row;
+    justify-content: end;
+    color: #e5e5e5;
+    text-align: right;
+    width: auto;
+}
+
+/* DATA VIZ*/
+
+#dataVizLayout{
+    opacity: 0;
+    display: none;
+}
+
+.country_panel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    height: 100vh;
+
+}
+
+.country_panel div{
+    display: flex;
+    margin: 0.3rem 4vw;
+}
+
+.country_panel span{
+    margin: 0;
+    padding: 0;
+    height: 4.6rem;
+    font-size: 4.6rem;
+    font-family: Anton;
+    letter-spacing: 0.3rem;
+    color : #232323;
+    white-space: pre;
+}
+
+#country_panel_l{
+    text-align: left;
+    left: 0;
+}
+
+#country_panel_l div{
+    flex-direction: row;
+}
+
+#country_panel_r{
+    text-align: right;
+    right: 0;
+}
+#country_panel_r div{
+    flex-direction: row-reverse;
+}
+
+.country_value{
+    width: 7vw;
+}
+
+.date_svg{
+    position: fixed;
+    left: 4vw;
+    top: 4vw;
+    width: 20vw;
+}
+
+.visu_legend{
+    position: fixed;
+    text-align: center;
+    width: 100vw;
+    bottom: 0;
+    font-family: SourceSansPro;
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: #232323;
+}
+
+.visu_legend strong{
+    font-family: SourceSansProBold;
+}
+
+#btn_restart{
+    position: fixed;
+    right: 4vw;
+    top:4vw;
+    width: 5vh;
+    height: 5vh;
+    z-index: 100;
+}
+
+#btn_restart:hover{
+    width: 5vh;
+    height: 5vh;
+    cursor: pointer;
+    transform: scale(0.8);
+}
+
+@keyframes grain {
+    0%, 100% { background-position : 0 0 }
+    10% { background-position : -3% -5% }
+    20% { background-position : -8% 3% }
+    30% { background-position : 7% -15% }
+    40% { background-position : -5% 12%}
+    50% { background-position : -7% 5% }
+    60% { background-position : 7% 0% }
+    70% { background-position : 0% 7% }
+    80% { background-position : 3% 15% }
+    90% { background-position : -5% 5% }
+  }
